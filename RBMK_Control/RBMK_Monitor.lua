@@ -42,7 +42,7 @@ local rs -- Library initialization (until defined later)
 
 -- Check for updates on github (EXPERIMENTAL)
 if component.isAvailable("internet") then
-	local shell = require("shell") -- Check for updates
+	-- Check for updates
 	os.execute("wget \"https://raw.githubusercontent.com/BallOfEnergy1/RBMK_Control/master/RBMK_Control/RBMK_Monitor.lua\" \"/RBMK_Control/recent_ver.lua\" -f")
 	local updated_file = io.open("/RBMK_Control/recent_ver.lua")
 	if updated_file:read("*a") == "" then
