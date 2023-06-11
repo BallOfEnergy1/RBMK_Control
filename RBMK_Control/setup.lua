@@ -13,16 +13,16 @@ if component.isAvailable("internet") then
 	local a = io.open("/lib/funclib.lua")
 	local b = io.open("/RBMK_Control/RBMK_Monitor.lua")
 	local c = io.open("/RBMK_Control/README.txt")
-	if a:read("*r") == "" then
+	if a:read("*a") == "" then
 		print("Failed to fetch libraries, rerun setup.")
 	end
-	if b:read("*r") == "" then
+	if b:read("*a") == "" then
 		print("Failed to fetch primary program, rerun setup.")
 	end
-	if c:read("*r") == "" then
+	if c:read("*a") == "" then
 		print("Failed to fetch documentation, rerun setup.")
 	end
-	if not(a:read("*r") == "") and not(b:read("*r") == "") and not(c:read("*r") == "") then
+	if not(a:read("*a") == "") and not(b:read("*a") == "") and not(c:read("*a") == "") then
 		print("Installation complete, make sure to read the README.txt for help.")
 	end
 else
