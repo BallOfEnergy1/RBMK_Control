@@ -22,9 +22,7 @@ if component.isAvailable("internet") then
 	if c:read("*a") == "" then
 		print("Failed to fetch documentation, rerun setup.")
 	end
-	if not(a:read("*a") == "") and not(b:read("*a") == "") and not(c:read("*a") == "") then
-		print("Installation complete, make sure to read the README.txt for help.")
-	end
+	print("Installation complete, make sure to read the README.txt for help.")
 else
 	print("Internet card is required to install.")
 end
