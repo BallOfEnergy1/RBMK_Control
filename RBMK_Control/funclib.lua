@@ -9,7 +9,4 @@ function funclib.inverse_mod(num1, num2)
 	return
 end
 
-
-
-
 return funclib
