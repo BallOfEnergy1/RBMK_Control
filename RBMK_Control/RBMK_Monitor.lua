@@ -316,6 +316,7 @@ do
 		rs = component.redstone
 	elseif user == "n" or user == "N" then
 		redstone_enabled = false
+		rs = ""
 	else
 		Warn_err("INVALID_CHAR")
 		os.exit()
