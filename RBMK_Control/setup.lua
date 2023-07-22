@@ -14,7 +14,7 @@ if component.isAvailable("internet") then
 	local a = io.open("/lib/funclib.lua")
 	local b = io.open("/RBMK_Control/RBMK_Monitor.lua")
 	local c = io.open("/RBMK_Control/README.txt")
-	local d = io.open("/lib/funclib.lua")
+	local d = io.open("/lib/gpulib.lua")
 	if a:read("*a") == "" then
 		print("Failed to fetch libraries, rerun setup.")
 	end
