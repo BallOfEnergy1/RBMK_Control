@@ -5,20 +5,6 @@ local component = require("component")
 if component.isAvailable("internet") then
 	print("Starting Install...")
 	require("filesystem").makeDirectory("/RBMK_Control")
-	local setup
-	setup = io.open("/setup.lua")
-	local setup_1 = setup:read("*a")
-	setup:close()
-	os.execute("wget \"https://raw.githubusercontent.com/BallOfEnergy1/RBMK_Control/master/RBMK_Control/setup.lua\" \"/setup.lua\" -f")
-	setup = io.open("/setup.lua")
-	local setup_2 = setup:read("*a")
-	setup:close()
-	if setup_2 == "" then
-		print("Failed to get setup file, reinstall the program.")
-	elseif setup_1 ~= setup_2 then
-		print("Setup file updated, rerun the setup program.")
-		os.exit(0x01)
-	end
 	os.execute("wget \"https://raw.githubusercontent.com/BallOfEnergy1/RBMK_Control/master/RBMK_Control/funclib.lua\" \"/lib/funclib.lua\" -f")
 	os.execute("wget \"https://raw.githubusercontent.com/BallOfEnergy1/RBMK_Control/master/RBMK_Control/gpulib.lua\" \"/lib/gpulib.lua\" -f")
 	os.execute("wget \"https://raw.githubusercontent.com/BallOfEnergy1/RBMK_Control/master/RBMK_Control/RBMK_Monitor.lua\" \"/RBMK_Control/RBMK_Monitor.lua\" -f")
