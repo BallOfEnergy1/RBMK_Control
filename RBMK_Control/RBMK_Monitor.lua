@@ -1,6 +1,10 @@
 
 -- CONFIG
 
+
+--                                      VERSION 1 - RBMK_MONITOR
+
+
 --- Whether or not the program will automatically be updated from pastebin.
 local auto_update = true
 
