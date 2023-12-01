@@ -766,7 +766,7 @@ while running do
 	local average_heat = getAverageRodData("fuel")
 	if average_heat > CONFIG["maxheat"] and redstone_enabled then
 		rs.setOutput({15, 15, 15, 15, 15, 15})
-	else
+	elseif redstone_enabled then
 		rs.setOutput({0, 0, 0, 0, 0, 0})
 	end
 	if AUTO then
